@@ -1,0 +1,335 @@
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 0.5
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 0.6
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 0.7
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 0.8
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 0.9
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.0
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.1
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.2
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.3
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.4
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.5
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.6
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.7
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.8
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 1.9
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 2.0
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 2.1
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 2.2
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 2.3
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 2.4
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
+@@@
+
+$molecule
+0 1
+H 0.0 0.0 0.0
+H 0.0 0.0 2.5
+$end
+
+$rem
+method      eom-ccsd
+basis       6-311G
+cc_symmetry false
+ee_singlets [12]
+ee_triplets [12]
+$end
+
