@@ -14,6 +14,3 @@ triplets  = PlotData(distances, energies[1])
 singlets.save_to_file('plotdatafiles/h2singlets.dat', floatfmt='%10.5f')
 triplets.save_to_file('plotdatafiles/h2triplets.dat', floatfmt='%10.5f')
 
-obj = PlotData.load_from_file('plotdatafiles/h2singlets.dat')
-print obj.points
-print obj.dataseries
