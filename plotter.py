@@ -4,40 +4,29 @@ import re
 
 class PlotData:
 
-  available_options = {'keylist':list, 'labels':dict, 'colors':dict}
+  def __init__(self, points, dataseries):
+    self.points = np.array(points)
+    self.dataseries = np.array(dataseries)
 
-  def __init__(self, points, dataseries, keylist):
-    self.points = points
-    self.dataseries = dataseries
-    self.keylist = keylist
+  def save_to_file(self, filename, floatfmt='%.18e'):
+    savearray = np.append(self.points.reshape(1,-1), self.dataseries, axis=0)
+    head = '@rows'
+    np.savetxt(filename, savearray, fmt=floatfmt, header=head)
 
-  
-  
+  @staticmethod
+  def load_from_file(filename):
+    loadarray = np.loadtxt(filename)
+    if re.search(r'@columns', open(filename).read()): loadarray = loadarray.transpose()
+    return PlotData(loadarray[0], loadarray[1:])
+
 
 class DataPlotter:
 
-  def __init__(self, filename, transpose=False):
-    self.transpose = transpose
-    self.parse_comment_lines(filename)
-    contents = np.loadtxt(filename)
-    if transpose: contents = contents.transpose()
-    self.points     = contents[0]
-    self.dataseries = contents[1:]
-
-  def parse_comment_lines(self, filename):
-    comments = ''.join(re.findall(r'#(.*)', open(filename).read()))
-    if comments is '': return
-    match = re.match(r'\s*(columns|rows)', comments)
-    if match:
-      self.transpose = 'columns' in match.groups()
-      comments = match.re.sub('', comments)
-    keys, lbls = [], []
-    for item in comments.split('|'):
-      key, lbl = item.split(':')
-      keys.append(key.strip())
-      lbls.append(lbl.strip())
-    self.keys = keys
-    self.labels = dict(zip(keys, lbls))
+  def __init__(self, filename):
+    pd = PlotData.load_from_file(filename)
+    points = pd.points
+    dataseries = pd.dataseries
+    self.pd, self.points, self.dataseries = pd, points, dataseries
 
   def scale_x(self, scalar): self.points *= scalar
 

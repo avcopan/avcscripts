@@ -1,13 +1,13 @@
-from avcscripts.plotter import PlotData
+from avcscripts.plotter import DataPlotter
 
-sngdata = PlotData('singlets.dat', transpose=True)
-print sngdata.points
-print sngdata.dataseries
-#print sngdata.keys
-#print sngdata.labels
+plotter = DataPlotter('plotdatafiles/h2singlets.dat')
+print plotter.points
+print plotter.dataseries
+#print plotter.keys
+#print plotter.labels
 
 import matplotlib.pyplot as pp
 
-sngdata.plot_all('b-')
+plotter.plot_all('b-')
 pp.savefig('singlets.pdf')
 
