@@ -1,5 +1,6 @@
 import numpy             as np
 import matplotlib.pyplot as plt
+from cycler import cycler
 import re
 
 class PlotData:
@@ -18,6 +19,19 @@ class PlotData:
     savearray = np.append(self.points.reshape(1,-1), self.dataseries, axis=0)
     head = '@rows'
     np.savetxt(filename, savearray, fmt=floatfmt, header=head)
+
+  def set_reference_series(self, index):
+    reference_series = self.dataseries[index]
+    self.dataseries  = np.delete(self.dataseries, index, axis=0) - reference_series
+
+  def set_color_cycle(self, color_cycle, label_cycle=None):
+    if label_cycle is None:
+      plt.rc('axes', prop_cycle=(cycler('color', color_cycle)))
+    else:
+      plt.rc('axes', prop_cycle=(cycler('color', color_cycle) + cycler('label', label_cycle)))
+
+  def set_label_cycle(self, label_cycle):
+    plt.rc('axes', prop_cycle=(cycler('label', label_cycle)))
 
   def scale_x(self, scalar): self.points *= scalar
 
