@@ -30,9 +30,6 @@ class PlotData:
     else:
       plt.rc('axes', prop_cycle=(cycler('color', color_cycle) + cycler('label', label_cycle)))
 
-  def set_label_cycle(self, label_cycle):
-    plt.rc('axes', prop_cycle=(cycler('label', label_cycle)))
-
   def scale_x(self, scalar): self.points *= scalar
 
   def scale_y(self, scalar): self.dataseries *= scalar
@@ -40,4 +37,10 @@ class PlotData:
   def plot_all(self, linestyle, **kwargs):
     for series in self.dataseries:
       plt.plot(self.points, series, linestyle, **kwargs)
+
+  def set_aspect_by_adjusting_width(self, aspect_ratio):
+    fig = plt.gcf()
+    width, height = fig.get_size_inches()
+    adjusted_width = height * aspect_ratio
+    fig.set_size_inches([adjusted_width, height])
 

@@ -21,6 +21,7 @@ plotdata_obj.set_reference_series(0) # set 0th column as reference, so the data 
 plotdata_obj.scale_y(hartree2kcal)   # convert vertical axis from Hartree to kcal mol
 plotdata_obj.set_color_cycle(color_cycle, label_cycle=label_cycle)
 plotdata_obj.plot_all('-', linewidth=3.0)
+plotdata_obj.set_aspect_by_adjusting_width(1.8)
 
 #  matplotlib stuff
 plt.rc('text', usetex=True)
@@ -30,6 +31,6 @@ plt.ylabel('$\Delta E$ / kcal mol$^{-1}$')
 plt.xlabel('$r$ / \AA')
 plt.tight_layout()
 plt.legend(loc='lower left')
-plt.savefig('data.pdf')
+plt.savefig('data.pdf', bbox_inches='tight')
 
 
